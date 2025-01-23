@@ -1,5 +1,7 @@
 # yz-jmcomic
 一个适用于yunzai的jm查本单js
+> [!WARNING]
+> 爱护jm，不要爬那么多本，西门
 
 ## 想说的
 - 本项目基于[Python API For JMComic (禁漫天堂)](https://github.com/hect0x7/JMComic-Crawler-Python/tree/master)简单改造而来

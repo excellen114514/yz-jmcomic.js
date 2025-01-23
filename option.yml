@@ -1,0 +1,13 @@
+dir_rule:
+  # base_dir: 根目录。
+  # 此配置也支持引用环境变量，例如
+  # base_dir: ${JM_DIR}/下载文件夹/
+  base_dir: C:/your/per/path/
+  rule: Bd / Ptitle
+plugins:
+  after_photo:
+    - plugin: long_img
+      kwargs:
+        img_dir: C:/your/per/path # 长图存放文件夹
+        filename_rule: Pid # 长图命名规则，同上
+

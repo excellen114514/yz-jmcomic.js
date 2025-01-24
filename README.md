@@ -20,7 +20,7 @@
 - 需要准备python>=3.7环境 [戳我下载](https://www.python.org/downloads/)
 - 安装jmcomic库和Flask
   ```python
-  pip install jmcomic -i https://pypi.org/project -U && Flask && schedule
+   pip install jmcomic  -i https://pypi.org/project -U Flask schedule 
   ```
 - 塞了简单的配置文件，如需自己更改可 [戳此查看](https://github.com/hect0x7/JMComic-Crawler-Python/blob/master/assets/docs/sources/option_file_syntax.md)
 - 对大小添加了限制，大于30mb的仅发送官网地址

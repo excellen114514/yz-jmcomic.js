@@ -20,11 +20,12 @@
 - 需要准备python>=3.7环境 [戳我下载](https://www.python.org/downloads/)
 - 安装jmcomic库和Flask
   ```python
-  pip install jmcomic -i https://pypi.org/project -U
-  pip install Flask
+  pip install jmcomic -i https://pypi.org/project -U && Flask && schedule
   ```
 - 塞了简单的配置文件，如需自己更改可 [戳此查看](https://github.com/hect0x7/JMComic-Crawler-Python/blob/master/assets/docs/sources/option_file_syntax.md)
 - 对大小添加了限制，大于30mb的仅发送官网地址
+- api会每隔一小时删除一次工作目录下除了long文件夹的所有文件夹
+- 脚本有简单的崩溃重启，非正常退出(0 code)会重新执行命令
 - ~~由于路径硬编码写入，所以需自己修改py文件和配置文件的路径喵~~
 
 ## 原理

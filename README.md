@@ -10,14 +10,14 @@
   
 ## 食用方法
 - 直接下载后扔到example文件夹即可
-- 先启动api
+- 先启动api(windows直接运行bat即可，默认bat和sh与py处于同一目录下)
   ```
-  python app1.py
+  ./run_app.sh
   ```
 - #jm查422866(仅允许私聊)
 
 ## 注意事项
-- 需要准备python>=3.7环境 [戳我下载](https://www.python.org/downloads/windows/)
+- 需要准备python>=3.7环境 [戳我下载](https://www.python.org/downloads/)
 - 安装jmcomic库和Flask
   ```python
   pip install jmcomic -i https://pypi.org/project -U

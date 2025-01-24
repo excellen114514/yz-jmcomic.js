@@ -12,7 +12,7 @@
 - 直接下载后扔到example文件夹即可
 - 先启动api(windows直接运行bat即可，默认bat和sh与py处于同一目录下)
   ```
-  ./run_app.sh
+  ./run_run.sh
   ```
 - #jm查422866(仅允许私聊)
 

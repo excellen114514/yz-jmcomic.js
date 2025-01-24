@@ -6,7 +6,7 @@ export class excellen extends plugin {
         super({
             name: 'ejm',
             dsc: 'example',
-            event: 'message',
+            event: 'message.private',
             priority: 1,
             rule: [{
                     reg: jm,

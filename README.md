@@ -9,24 +9,29 @@
 - 使用简单，容易上手
   
 ## 食用方法
-- 直接下载后扔到example文件夹即可
-- 先启动api(windows直接运行bat即可，默认bat和sh与py处于同一目录下)
+- js文件直接下载后放到到example文件夹即可
+- 随便找一个文件夹存放api,下载bat文件直接运行,会使用git下载
+  ```shell
+  ./run.bat
   ```
-  ./run.sh
+- 启动api
+  ```shell
+  python3 app.py
   ```
-- #jm查422866(仅允许私聊)
+- 然后对bot发送 #jm查{本子号} (仅允许私聊)
 
 ## 注意事项
 - 需要准备python>=3.7环境 [戳我下载](https://www.python.org/downloads/)
-- 安装jmcomic库和Flask
+- 安装jmcomic库和Flask(依赖文件)
   ```python
-   pip install jmcomic  -i https://pypi.org/project -U Flask schedule 
+  pip install -r requirements.txt
   ```
 - 塞了简单的配置文件，如需自己更改可 [戳此查看](https://github.com/hect0x7/JMComic-Crawler-Python/blob/master/assets/docs/sources/option_file_syntax.md)
 - 对大小添加了限制，大于30mb的仅发送官网地址
 - api会每隔一小时删除一次工作目录下除了long文件夹的所有文件夹
 - 脚本有简单的崩溃重启，非正常退出(0 code)会重新执行命令
 - ~~由于路径硬编码写入，所以需自己修改py文件和配置文件的路径喵~~
+- 支持了.env环境变量了喵,现在你只需要在.env自定义你存放的目录就好了奥
 
 ## 原理
 - 使用Flask创建一个简单的webapi，并在node中用fetch请求和捕获异常

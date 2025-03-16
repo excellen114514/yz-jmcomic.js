@@ -27,8 +27,9 @@
   pip install -r requirements.txt
   ```
 - 塞了简单的配置文件，如需自己更改可 [戳此查看](https://github.com/hect0x7/JMComic-Crawler-Python/blob/master/assets/docs/sources/option_file_syntax.md)
-- 对大小添加了限制，大于30mb的仅发送官网地址
-- api会每隔一小时删除一次工作目录下除了long文件夹的所有文件夹
+- ~~对大小添加了限制，大于30mb的仅发送官网地址~~
+- 现在在icqq环境下可以发送pdf格式的文件了
+- api会每隔一小时删除一次工作目录下除了long和pdf文件夹的所有文件夹
 - 脚本有简单的崩溃重启，非正常退出(0 code)会重新执行命令
 - ~~由于路径硬编码写入，所以需自己修改py文件和配置文件的路径喵~~
 - 支持了.env环境变量了喵,现在你只需要在.env自定义你存放的目录就好了奥
@@ -36,6 +37,7 @@
 ## 原理
 - 使用Flask创建一个简单的webapi，并在node中用fetch请求和捕获异常
 - 启动后本地地址应为 http://127.0.0.1:8000/jmd?jm=
+- pdf请求地址为 http://127.0.0.1:8000/jmdp?jm=
 - jmcomic库会先把本子下载，再进行长图拼接
 
 ## 许可证

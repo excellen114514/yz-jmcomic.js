@@ -1,9 +1,13 @@
 dir_rule:
   base_dir: ${JM_BASE_DIR}
-  rule: Bd / Ptitle
+  rule: Bd_Pid
 plugins:
   after_photo:
     - plugin: long_img
       kwargs:
         img_dir: ${JM_BASE_DIR}/long
         filename_rule: Pid
+    - plugin: img2pdf
+      kwargs:
+        pdf_dir: ${JM_BASE_DIR}/pdf # pdf存放文件夹
+        filename_rule: Pid # pdf命名规则，P代表photo, id代表使用photo.id也就是章节id

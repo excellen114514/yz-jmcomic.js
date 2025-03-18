@@ -26,6 +26,10 @@
   ```python
   pip install -r requirements.txt
   ```
+- yunzai根目录执行
+  ``` node
+  pnpm install axios -w
+  ```
 - 塞了简单的配置文件，如需自己更改可 [戳此查看](https://github.com/hect0x7/JMComic-Crawler-Python/blob/master/assets/docs/sources/option_file_syntax.md)
 - ~~对大小添加了限制，大于30mb的仅发送官网地址~~
 - 现在在icqq环境下可以发送pdf格式的文件了

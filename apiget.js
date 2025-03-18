@@ -56,7 +56,7 @@ export class excellen extends plugin {
             }
             await downloadAndAutoDelete(url, tup);
               await e.reply(e.friend.sendFile(`././plugins/example/${tup}.pdf`)) 
-              
+              await e.reply('ok')
               return true; 
           }else{
             // 处理响应体内容

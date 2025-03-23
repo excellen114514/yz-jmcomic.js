@@ -47,8 +47,10 @@ export class excellen extends plugin {
           const bytes = Buffer.byteLength(responseText, "utf8");
           console.log(`图片大小：${bytes}字节`);
           if (bytes >= 31457280) {
-              logger.error('图片过大，将请求pdf下载并文件发送');
-              let url = `http://43.156.230.21:8000/jmdp?jm=${encodeURIComponent(tup)}`;
+            let url = `http://43.156.230.21:8000/jmdp?jm=${encodeURIComponent(tup)}`;
+            try{
+              logger.warn('图片过大，将请求pdf下载并文件发送');
+              
               let res = await fetch(url);
               if (!res || !res.ok) {
                 logger.error('[jm] 请求失败');
@@ -56,10 +58,14 @@ export class excellen extends plugin {
             }
             await downloadAndAutoDelete(url, tup);
               await e.reply(e.friend.sendFile(`././plugins/example/${tup}.pdf`)) 
-              await e.reply('ok')
+             e.reply('文件拉取完成，耐心等待发送吧')
               return true; 
+            }catch(err){
+               return await this.reply('错误，请检查车号或稍后重试！');
+            }
+              
           }else{
-            // 处理响应体内容
+       
           let msg = [segment.image(res.url)]; // 返回的是图片
           const forward = [
             '爱护jm，不要爬这么多本子，jm压力大你bot压力也大，西门',
@@ -68,9 +74,11 @@ export class excellen extends plugin {
           forward.push(msg);
           const fmsg = await common.makeForwardMsg(e, forward, `album${tup}`);
           await this.reply(fmsg);
+        
+          
     }
           return true; // 返回 true，阻挡消息不再往下
-      } catch (err) {
+          } catch (err) {
           logger.error(`[jm] 请求失败：${err}`);
           return await this.reply('请求失败，请检查车号或稍后重试！');
       }

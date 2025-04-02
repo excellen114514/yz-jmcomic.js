@@ -28,7 +28,7 @@ export class excellen extends plugin {
       tup = tup.replace(/#jm查/g, "").trim();
   
       // 构造请求URL
-      let url = `http://43.156.230.21:8000/jmd?jm=${encodeURIComponent(tup)}`;
+      let url = `http://127.0.0.1:8000/jmd?jm=${encodeURIComponent(tup)}`;
   
       try {
           // 发起请求
@@ -47,7 +47,7 @@ export class excellen extends plugin {
           const bytes = Buffer.byteLength(responseText, "utf8");
           console.log(`图片大小：${bytes}字节`);
           if (bytes >= 31457280) {
-            let url = `http://43.156.230.21:8000/jmdp?jm=${encodeURIComponent(tup)}`;
+            let url = `http://127.0.0.1:8000/jmdp?jm=${encodeURIComponent(tup)}`;
             try{
               logger.warn('图片过大，将请求pdf下载并文件发送');
               

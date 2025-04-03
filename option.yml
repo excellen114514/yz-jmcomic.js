@@ -11,3 +11,14 @@ plugins:
       kwargs:
         pdf_dir: ${JM_BASE_DIR}/pdf # pdf存放文件夹
         filename_rule: Pid # pdf命名规则，P代表photo, id代表使用photo.id也就是章节id
+client:
+  # 域名列表的使用顺序是：先用第一个域名，如果第一个域名重试n次失败，则换下一个域名重试，以此类推。
+  # 注意下面这些域名可能会过时，不一定能用
+  domain:
+    api:
+      - www.cdnmhwscc.vip
+      - www.cdnblackmyth.club
+      - www.cdnmhws.cc
+      - www.cdnuc.vip
+  # retry_times: 请求失败重试次数，默认为5
+  retry_times: 5

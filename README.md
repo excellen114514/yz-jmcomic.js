@@ -7,6 +7,7 @@
 ## 想说的
 - 本项目基于[Python API For JMComic (禁漫天堂)](https://github.com/hect0x7/JMComic-Crawler-Python/tree/master)简单改造而来
 - 使用简单，容易上手
+- 一键部署插件包已经开发：[戳我](https://github.com/excellen114514/jmcomic-plugin)
   
 ## 食用方法
 - js文件直接下载后放到到example文件夹即可
